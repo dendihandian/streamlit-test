@@ -27,3 +27,8 @@ install streamlit package:
 pip install streamlit
 ```
 
+run the streamlit development server:
+```
+streamlit run main.py
+```
+
