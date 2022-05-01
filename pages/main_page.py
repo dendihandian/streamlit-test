@@ -3,6 +3,8 @@ st.set_page_config(layout="wide")
 
 import sys
 import pkg_resources
+import platform
+from datetime import datetime 
 
 
 installed_packages = pkg_resources.working_set
@@ -11,6 +13,12 @@ installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in install
 
 def main_page():
     st.title('Streamlit Test', anchor=None)
+
+    st.write('Server Information')
+    st.table([
+        ['Datetime', datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
+        ['Operating System', " ".join([platform.system(), platform.release(), platform.version()])]
+    ])
 
     st.write('Environment Information')
     st.table([
