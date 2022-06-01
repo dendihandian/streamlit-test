@@ -5,30 +5,27 @@ Streamlit project for learning purpose
 
 ## Requirement
 
-- Anaconda
-- Streamlit Package (Install via Anaconda)
+- Python
 
-## Development
+## Appendix
 
-It's better to create a new Anaconda Environment named `streamlit_related` or `streamlit_projects` or anything. You can use conda command to create it:
-
+create a new venv using python (`stvenv` is the given venv name for this project):
 ```
-conda create -n streamlit_related python=3.8
+python -m venv stvenv
 ```
 
-use the new created env:
-
+activate venv (for windows cmd):
 ```
-conda activate streamlit_related
-```
-
-install streamlit package:
-```
-pip install streamlit
+stvenv\Scripts\activate
 ```
 
-run the streamlit development server:
+deactivate venv:
 ```
-streamlit run main.py
+deactivate stvenv
+```
+
+export venv:
+```
+pip freeze > requirements.txt
 ```
 
